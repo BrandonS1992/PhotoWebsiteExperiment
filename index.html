@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Home Page</title>
+		<script lanuage="javascript">
+		function handleClick(element) { element.src="images/_BAS0716ALT.JPG"; }
+		function handleMove(element) {element.src="images/_BAS0716.JPG"; }
+		</script>
+	
+	<SCRIPT>
+	IMAGE01 = "images/on.gif"  
+	IMAGE02 = "images/off.gif"
+	IMAGE03 = "images/on.gif"  
+	IMAGE04 = "images/off.gif"
+	IMAGE05 = "images/on.gif"  
+	IMAGE06 = "images/off.gif"
+	IMAGE07 = "images/on.gif"  
+	IMAGE08 = "images/off.gif"
+	IMAGE09 = "images/on.gif"  
+	IMAGE10 = "images/off.gif"
+	
+	function imgover(imgname){
+		 imgname.src = IMAGE01
+	}
+
+	function imgout(imgname){
+		 imgname.src = IMAGE02
+	}
+		function imgover(imgname){
+		 imgname.src = IMAGE03
+	}
+
+	function imgout(imgname){
+		 imgname.src = IMAGE04
+	}
+	</SCRIPT>
+	
+	
+	<link rel="stylesheet" type="text/css" href="CSS/background.css">
+	
+	<style>
+
+	body
+	{
+    background-image: url("images/Background_TruePhoto.bmp"), url("images/_BAS0753.JPG");
+	background-repeat: no-repeat, repeat-y;
+    background-position: center 0px, center 220px;
+	}
+	</style>
+	</head>
+	
+	<body>
+		<div style='margin:auto; width:940px; overflow:hidden;'> 
+		<h1>TruePhoto</h1>
+		
+		<a href="index.html">
+		<img src="images/Home.bmp" alt="Home" style="float:left; 1px;">
+		</a>
+		<a href="Broken.html">
+		<img src="images/New Page 1.bmp" alt="New Page 1" style="float:left; 1px;">
+		</a>
+		<a href="dataRetrieval.html">
+		<img src="images/dataRetrieval.bmp" alt="Data Retrieval" style="float:left; 1px;">
+		</a>
+		<a href="account.html"> 
+		<img src="images/Account.bmp"  alt="Account" style="float:left; 1px;">
+		</a>
+		<a href="formPage.html"> 
+		<img src="images/Feedback.bmp"  alt="Form Page" style="float:left; 1px;">
+		</a>
+		</div>
+		<div style='margin:auto; width:900px; overflow:hidden;'> 
+		
+		<SCRIPT>
+		var now = new Date();
+
+		var days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
+
+		var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+
+		var date = ((now.getDate()<10) ? "0" : "")+ now.getDate();
+
+		function fourdigits(number)	{
+			return (number < 1000) ? number + 1900 : number;
+										}
+		today =  days[now.getDay()] + ", " +
+				 months[now.getMonth()] + " " +
+				 date + ", " +
+				 (fourdigits(now.getYear())) ;
+
+		document.write(today);
+		</script>
+		<h2>What is TruePhoto?</h2>
+		<p>TruePhoto is a company that strives to deliver one of a kind photographs for varying 
+		sizes to satisfy customer needs. Because our photos are not free this helps in many ways 
+		that would not otherwise be possible. When you buy our photographs this allows us to continue 
+		paying our photographers and their expenses to continue their journey to provide you the best 
+		quality photos possible, like the one below.</p>
+		<img src="images/_BAS0716.JPG" onmouseover="handleClick(this)" 
+		onmouseout="handleMove(this)"; 
+		alt="Professional Camera: Squirrel">
+		
+		<h3>Don't Like Squirrels?</h3>
+		<p>No worries, because we are able to afford funding for our photographers you'll enjoy a 
+		wide variety of photos that you can feast your eyes on. Our photos range from nature, people, 
+		land animals, birds and oceans. You are sure to find a photo for nearly everything you need. 
+		Once you purchase one or more of our photos you are then able to use it for anything you want 
+		whether personal or commercial use. So please, check our photos out today!</p>
+		
+		
+		
+		
+		<ul>
+		<li><IMG NAME="IMAGE01" SRC="off.gif" WIDTH=10 HEIGHT=10 BORDER=0> 
+		<a HREF="XML/Nature.xml" onMouseOver="imgover(IMAGE01)" onMouseOut="imgout(IMAGE01)">Nature</a></li>
+		<li><IMG NAME="IMAGE03" SRC="off.gif" WIDTH=10 HEIGHT=10 BORDER=0> 
+		<a HREF="XML/People.xml" onMouseOver="imgover(IMAGE03)" onMouseOut="imgout(IMAGE03)">People</a></li>
+		<li><IMG NAME="IMAGE05" SRC="off.gif" WIDTH=10 HEIGHT=10 BORDER=0> 
+		<a HREF="XML/Land Animals.xml" onMouseOver="imgover(IMAGE05)" onMouseOut="imgout(IMAGE05)">Land Animals</a></li>
+		<li><IMG NAME="IMAGE07" SRC="off.gif" WIDTH=10 HEIGHT=10 BORDER=0> 
+		<a HREF="XML/Birds.xml" onMouseOver="imgover(IMAGE07)" onMouseOut="imgout(IMAGE07)">Birds</a></li>
+		<li><IMG NAME="IMAGE09" SRC="off.gif" WIDTH=10 HEIGHT=10 BORDER=0> 
+		<a HREF="XML/Oceans.xml" onMouseOver="imgover(IMAGE09)" onMouseOut="imgout(IMAGE09)">Oceans</a></li>
+		</ul>
+		
+		<h3>Like what you see? Add us to your favorites.</h3>
+
+		<FORM>
+		<INPUT TYPE="button" VALUE="Add to Favorites" onClick='window.external.AddFavorite(location.href, document.title);'>
+		</FORM>
+		</div> 
+	</body>
+
+</html>
